@@ -80,4 +80,16 @@ import Testing
         state.handle(URL(string: "HTTPS://TAP.MANICPIXIETHRIFT.COM/?SRC=FOB")!)
         #expect(state.source == .fob)
     }
+
+    @Test func relativeImagePathsResolveAgainstTheLoadedSite() throws {
+        let data = try Data(contentsOf: Self.webContentURL)
+        let raw = try JSONDecoder.content.decode(SiteContent.self, from: data)
+        #expect(raw.brand.logoURL.scheme == nil, "logo path in content.json should be relative")
+        let resolved = raw.resolvingURLs(against: URL(string: "https://manicpixie-tap.netlify.app/")!)
+        #expect(resolved.brand.logoURL.absoluteString == "https://manicpixie-tap.netlify.app/images/logo-512.png")
+        #expect(resolved.drop?.pieces.first?.imageURL.host == "manicpixie-tap.netlify.app")
+        #expect(resolved.links.first?.url == raw.links.first?.url, "absolute URLs are untouched")
+        let roundTrip = try JSONDecoder.content.decode(SiteContent.self, from: JSONEncoder.content.encode(resolved))
+        #expect(roundTrip == resolved)
+    }
 }

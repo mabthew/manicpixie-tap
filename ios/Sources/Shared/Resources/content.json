@@ -5,7 +5,7 @@
     "name": "Manic Pixie Thrift",
     "handle": "@manicpixiethrift",
     "tagline": "wear what you want <3",
-    "logoURL": "https://tap.manicpixiethrift.com/images/logo-512.png",
+    "logoURL": "images/logo-512.png",
     "accentHex": "#C9B6E4"
   },
   "links": [
@@ -35,7 +35,7 @@
         "title": "Placeholder: 90s leather blazer",
         "size": "M",
         "price": "$48",
-        "imageURL": "https://tap.manicpixiethrift.com/images/drops/2026-11/placeholder-lavender.jpg",
+        "imageURL": "images/drops/2026-11/placeholder-lavender.jpg",
         "url": "https://www.depop.com/manicpixiethrift",
         "sold": false,
         "tags": ["outerwear", "90s"],
@@ -46,7 +46,7 @@
         "title": "Placeholder: silk slip dress",
         "size": "S",
         "price": "$36",
-        "imageURL": "https://tap.manicpixiethrift.com/images/drops/2026-11/placeholder-rose.jpg",
+        "imageURL": "images/drops/2026-11/placeholder-rose.jpg",
         "url": "https://www.depop.com/manicpixiethrift",
         "sold": false,
         "tags": ["dresses", "romantic"]
@@ -56,7 +56,7 @@
         "title": "Placeholder: Y2K rhinestone cardigan",
         "size": "L",
         "price": "$32",
-        "imageURL": "https://tap.manicpixiethrift.com/images/drops/2026-11/placeholder-sage.jpg",
+        "imageURL": "images/drops/2026-11/placeholder-sage.jpg",
         "url": "https://www.depop.com/manicpixiethrift",
         "sold": true,
         "tags": ["knits", "y2k"]

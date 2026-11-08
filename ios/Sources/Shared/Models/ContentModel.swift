@@ -149,3 +149,39 @@ extension JSONDecoder {
         return d
     }
 }
+
+extension SiteContent {
+    /// Resolves relative paths in the JSON (for example `images/logo-512.png`) against the site
+    /// the content was loaded from. Absolute URLs are left alone.
+    func resolvingURLs(against base: URL) -> SiteContent {
+        var c = self
+        c.brand.logoURL = Self.resolve(c.brand.logoURL, against: base)
+        c.links = c.links.map { var l = $0; l.url = Self.resolve(l.url, against: base); return l }
+        if var b = c.booking { b.url = Self.resolve(b.url, against: base); c.booking = b }
+        if var e = c.nextLive { e.url = Self.resolve(e.url, against: base); c.nextLive = e }
+        if var d = c.drop {
+            d.pieces = d.pieces.map { piece in
+                var p = piece
+                p.imageURL = Self.resolve(p.imageURL, against: base)
+                p.url = p.url.map { Self.resolve($0, against: base) }
+                return p
+            }
+            c.drop = d
+        }
+        return c
+    }
+
+    static func resolve(_ url: URL, against base: URL) -> URL {
+        if url.scheme != nil { return url }
+        return URL(string: url.relativeString, relativeTo: base)?.absoluteURL ?? url
+    }
+}
+
+extension JSONEncoder {
+    /// Matches `JSONDecoder.content` (ISO 8601 dates) for the on-device cache.
+    static var content: JSONEncoder {
+        let e = JSONEncoder()
+        e.dateEncodingStrategy = .iso8601
+        return e
+    }
+}

@@ -21,7 +21,7 @@ final class ContentLoader {
         let caches = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
         cacheFile = caches.appendingPathComponent("content.json")
 
-        let bundled = Self.loadBundled()
+        let bundled = Self.loadBundled().resolvingURLs(against: Config.activeContentBases[0])
         if let data = try? Data(contentsOf: cacheFile),
            let cached = try? JSONDecoder.content.decode(SiteContent.self, from: data),
            cached.schemaVersion == SiteContent.supportedSchema,
@@ -47,23 +47,36 @@ final class ContentLoader {
         isRefreshing = true
         defer { isRefreshing = false }
 
-        var request = URLRequest(url: Config.contentURL, cachePolicy: .reloadRevalidatingCacheData, timeoutInterval: 8)
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
-        do {
-            let (data, response) = try await session.data(for: request)
-            guard let http = response as? HTTPURLResponse, (200..<300).contains(http.statusCode) else {
-                throw URLError(.badServerResponse)
+        var lastFailure: Error?
+        for base in Config.activeContentBases {
+            do {
+                let fresh = try await fetch(from: base)
+                content = fresh
+                source = .network
+                lastError = nil
+                if let data = try? JSONEncoder.content.encode(fresh) {
+                    try? data.write(to: cacheFile, options: .atomic)
+                }
+                return
+            } catch {
+                lastFailure = error
             }
-            let fresh = try JSONDecoder.content.decode(SiteContent.self, from: data)
-            guard fresh.schemaVersion == SiteContent.supportedSchema else {
-                throw DecodingError.dataCorrupted(.init(codingPath: [], debugDescription: "Unsupported schema \(fresh.schemaVersion)"))
-            }
-            content = fresh
-            source = .network
-            lastError = nil
-            try? data.write(to: cacheFile, options: .atomic)
-        } catch {
-            lastError = error.localizedDescription
         }
+        lastError = lastFailure?.localizedDescription
+    }
+
+    private func fetch(from base: URL) async throws -> SiteContent {
+        var request = URLRequest(url: base.appendingPathComponent("content.json"),
+                                 cachePolicy: .reloadRevalidatingCacheData, timeoutInterval: 6)
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        let (data, response) = try await session.data(for: request)
+        guard let http = response as? HTTPURLResponse, (200..<300).contains(http.statusCode) else {
+            throw URLError(.badServerResponse)
+        }
+        let fresh = try JSONDecoder.content.decode(SiteContent.self, from: data)
+        guard fresh.schemaVersion == SiteContent.supportedSchema else {
+            throw DecodingError.dataCorrupted(.init(codingPath: [], debugDescription: "Unsupported schema \(fresh.schemaVersion)"))
+        }
+        return fresh.resolvingURLs(against: base)
     }
 }
