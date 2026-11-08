@@ -8,7 +8,7 @@ options:
 
 settings:
   base:
-    DEVELOPMENT_TEAM: 379TRF57VQ
+    DEVELOPMENT_TEAM: SWU3W79M33
     CODE_SIGN_STYLE: Automatic
     SWIFT_VERSION: "6.0"
     MARKETING_VERSION: "1.0.0"          # the App Clip must carry the same version/build as the app

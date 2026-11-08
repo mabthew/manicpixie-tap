@@ -17,4 +17,4 @@ Updating what the app shows: edit `web/public/content.json` (and copy it to
 `tools/add-image.sh`, deploy. No App Store update needed.
 
 Invocation URL: `https://tap.manicpixiethrift.com/` (NFC record `https://tap.manicpixiethrift.com/?src=fob`,
-QR payload `HTTPS://TAP.MANICPIXIETHRIFT.COM`). Bundle IDs `com.manicpixiethrift.app` / `.Clip`, team 379TRF57VQ.
+QR payload `HTTPS://TAP.MANICPIXIETHRIFT.COM`). Bundle IDs `com.manicpixiethrift.app` / `.Clip`, team SWU3W79M33.

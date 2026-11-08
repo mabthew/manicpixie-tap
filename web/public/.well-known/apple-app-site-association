@@ -1,11 +1,11 @@
 {
   "appclips": {
-    "apps": ["379TRF57VQ.com.manicpixiethrift.app.Clip"]
+    "apps": ["SWU3W79M33.com.manicpixiethrift.app.Clip"]
   },
   "applinks": {
     "details": [
       {
-        "appIDs": ["379TRF57VQ.com.manicpixiethrift.app"],
+        "appIDs": ["SWU3W79M33.com.manicpixiethrift.app"],
         "components": [{ "/": "*" }]
       }
     ]
