@@ -14,6 +14,7 @@ struct HomeView: View {
     @State private var promoShown = false
 
     private var site: SiteContent { loader.content }
+    private var upcoming: [LiveEvent] { site.upcomingLives() }
 
     private var isClip: Bool {
         #if APPCLIP
@@ -40,10 +41,11 @@ struct HomeView: View {
                 ScrollView {
                     VStack(spacing: 28) {
                         BrandHeaderView(brand: site.brand)
-                        if let live = site.nextLive {
+                        if let live = upcoming.first {
                             LiveCountdownView(event: live)
                                 .id(InvocationState.Section.live)
                         }
+                        UpcomingLivesStrip(lives: Array(upcoming.dropFirst().prefix(8)))
                         if let booking = site.booking {
                             BookingCard(booking: booking) { showChooser = true }
                                 .id(InvocationState.Section.book)

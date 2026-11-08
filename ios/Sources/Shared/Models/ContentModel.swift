@@ -10,7 +10,16 @@ struct SiteContent: Codable, Sendable, Equatable {
     var links: [LinkItem]
     var booking: Booking?
     var nextLive: LiveEvent?
+    var lives: [LiveEvent]?
     var drop: Drop?
+
+    /// Scheduled lives that have not ended, soonest first. Falls back to `nextLive`.
+    func upcomingLives(now: Date = .now) -> [LiveEvent] {
+        let all = (lives ?? []) + (nextLive.map { [$0] } ?? [])
+        return all
+            .filter { LiveState.from(now: now, event: $0) != .ended }
+            .sorted { $0.startsAt < $1.startsAt }
+    }
 }
 
 struct Brand: Codable, Sendable, Equatable {
@@ -60,12 +69,16 @@ struct Booking: Codable, Sendable, Equatable {
     var url: URL
 }
 
-struct LiveEvent: Codable, Sendable, Equatable {
+struct LiveEvent: Codable, Sendable, Equatable, Identifiable, Hashable {
     var title: String
     var startsAt: Date
     var endsAt: Date?
     var url: URL
     var platform: String
+    var imageURL: URL?
+    var tags: [String]?
+
+    var id: URL { url }
 }
 
 struct Drop: Codable, Sendable, Equatable {
@@ -158,7 +171,13 @@ extension SiteContent {
         c.brand.logoURL = Self.resolve(c.brand.logoURL, against: base)
         c.links = c.links.map { var l = $0; l.url = Self.resolve(l.url, against: base); return l }
         if var b = c.booking { b.url = Self.resolve(b.url, against: base); c.booking = b }
-        if var e = c.nextLive { e.url = Self.resolve(e.url, against: base); c.nextLive = e }
+        if var e = c.nextLive { e.url = Self.resolve(e.url, against: base); e.imageURL = e.imageURL.map { Self.resolve($0, against: base) }; c.nextLive = e }
+        c.lives = c.lives?.map { live in
+            var e = live
+            e.url = Self.resolve(e.url, against: base)
+            e.imageURL = e.imageURL.map { Self.resolve($0, against: base) }
+            return e
+        }
         if var d = c.drop {
             d.pieces = d.pieces.map { piece in
                 var p = piece

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-08T12:00:00Z",
+  "updatedAt": "2026-11-08T16:30:00Z",
   "brand": {
     "name": "Manic Pixie Thrift",
     "handle": "@manicpixiethrift",
@@ -9,57 +9,516 @@
     "accentHex": "#C9B6E4"
   },
   "links": [
-    { "id": "depop", "kind": "depop", "title": "Shop on Depop", "url": "https://www.depop.com/manicpixiethrift" },
-    { "id": "whatnot", "kind": "whatnot", "title": "Whatnot lives", "url": "https://www.whatnot.com/s/RfBZOqUW" },
-    { "id": "instagram", "kind": "instagram", "title": "Instagram", "url": "https://www.instagram.com/manicpixiethrift/" },
-    { "id": "tiktok", "kind": "tiktok", "title": "TikTok", "url": "https://www.tiktok.com/@manicpixiethrift" },
-    { "id": "pinterest", "kind": "pinterest", "title": "Pinterest", "url": "https://www.pinterest.com/manicpixiethrift/" },
-    { "id": "site", "kind": "website", "title": "manicpixiethrift.com", "url": "https://manicpixiethrift.com/" }
+    {
+      "id": "whatnot",
+      "kind": "whatnot",
+      "title": "Whatnot shop & lives",
+      "url": "https://www.whatnot.com/user/manicpixiethrift"
+    },
+    {
+      "id": "depop",
+      "kind": "depop",
+      "title": "Depop",
+      "url": "https://www.depop.com/manicpixiethrift"
+    },
+    {
+      "id": "instagram",
+      "kind": "instagram",
+      "title": "Instagram",
+      "url": "https://www.instagram.com/manicpixiethrift/"
+    },
+    {
+      "id": "tiktok",
+      "kind": "tiktok",
+      "title": "TikTok",
+      "url": "https://www.tiktok.com/@manicpixiethrift"
+    },
+    {
+      "id": "pinterest",
+      "kind": "pinterest",
+      "title": "Pinterest",
+      "url": "https://www.pinterest.com/manicpixiethrift/"
+    },
+    {
+      "id": "site",
+      "kind": "website",
+      "title": "manicpixiethrift.com",
+      "url": "https://manicpixiethrift.com/"
+    }
   ],
   "booking": {
     "title": "Styling appointment",
     "blurb": "Style bundles shipped to you, or shop the studio together in Denver",
     "url": "https://calendly.com/mpdgthrift"
   },
-  "nextLive": {
-    "title": "Cozy season drop",
-    "startsAt": "2026-11-15T19:00:00-07:00",
-    "url": "https://www.whatnot.com/s/RfBZOqUW",
-    "platform": "whatnot"
-  },
+  "lives": [
+    {
+      "title": "STRAIGHT FROM EUROPE 1st DIBS (11/9)",
+      "startsAt": "2026-11-08T14:53:00-07:00",
+      "url": "https://www.whatnot.com/live/25417bb5-bd5d-4b2f-a456-49a911f7d68d",
+      "platform": "whatnot",
+      "imageURL": "images/lives/straight-from-europe-1st-dibs-11-9-a057886e.jpg",
+      "tags": [
+        "Vintage",
+        "Thrifted",
+        "Grails"
+      ]
+    },
+    {
+      "title": "CRAZY DENIM HAUL!!!! 🧚🏼‍♀️✨ (11/11)",
+      "startsAt": "2026-11-08T15:20:00-07:00",
+      "url": "https://www.whatnot.com/live/61d265cb-b681-42bc-9545-51acdbc01d29",
+      "platform": "whatnot",
+      "imageURL": "images/lives/crazy-denim-haul-11-11-e39b48a6.jpg",
+      "tags": [
+        "Vintage",
+        "Grails",
+        "Thrifted"
+      ]
+    },
+    {
+      "title": "STRAIGHT FROM EUROPE 1st dibs",
+      "startsAt": "2026-11-11T14:46:00-07:00",
+      "url": "https://www.whatnot.com/live/5664c715-67e6-454e-9874-494e66db1f43",
+      "platform": "whatnot",
+      "imageURL": "images/lives/straight-from-europe-1st-dibs-a2ef7837.jpg"
+    },
+    {
+      "title": "11/13 BDAY SHOW: my dream pieces <3",
+      "startsAt": "2026-11-13T12:00:00-07:00",
+      "url": "https://www.whatnot.com/live/9fb04a13-5f22-49fc-a671-2c7876240660",
+      "platform": "whatnot",
+      "imageURL": "images/lives/11-13-bday-show-my-dream-pieces-3-ec727f95.jpg"
+    },
+    {
+      "title": "CHERRY BOMB: sultry, rich, romantic edit (tbd)",
+      "startsAt": "2026-11-14T19:57:00-07:00",
+      "url": "https://www.whatnot.com/live/2daf33f9-51b0-4c72-9dad-2275ee682f06",
+      "platform": "whatnot",
+      "imageURL": "images/lives/cherry-bomb-sultry-rich-romantic-edit-tb-c12c8cb0.jpg"
+    },
+    {
+      "title": "10k GRAIL SHOW 🎊 (tbd)",
+      "startsAt": "2026-11-19T21:27:00-07:00",
+      "url": "https://www.whatnot.com/live/aa301a38-0a85-4980-902a-44f396d1206d",
+      "platform": "whatnot",
+      "imageURL": "images/lives/10k-grail-show-tbd-70a198f6.jpg",
+      "tags": [
+        "Vintage",
+        "Y2K"
+      ]
+    },
+    {
+      "title": "LUCKY GIRL: symbols of luck edit (11/27)",
+      "startsAt": "2026-11-20T11:00:00-07:00",
+      "url": "https://www.whatnot.com/live/b8e91a6f-980d-410a-a76d-9bc16311ee92",
+      "platform": "whatnot",
+      "imageURL": "images/lives/lucky-girl-symbols-of-luck-edit-11-27-ad82c59b.jpg"
+    },
+    {
+      "title": "SWANS SEA RAID TRAIN (11/20)",
+      "startsAt": "2026-11-20T16:00:00-07:00",
+      "url": "https://www.whatnot.com/live/12686821-8428-4316-b068-01f3e9893430",
+      "platform": "whatnot",
+      "imageURL": "images/lives/swans-sea-raid-train-11-20-c4287bd7.jpg",
+      "tags": [
+        "Y2K"
+      ]
+    },
+    {
+      "title": "EVERGREEN: enchanted grove edit (11/20)",
+      "startsAt": "2026-11-20T20:36:00-07:00",
+      "url": "https://www.whatnot.com/live/21a34d60-71e9-4efc-8902-d9724be337dc",
+      "platform": "whatnot",
+      "imageURL": "images/lives/evergreen-enchanted-grove-edit-11-20-1cc2ebb4.jpg",
+      "tags": [
+        "Y2K"
+      ]
+    },
+    {
+      "title": "FUR + LEATHER RAID TRAIN (11/28)",
+      "startsAt": "2026-11-28T12:00:00-07:00",
+      "url": "https://www.whatnot.com/live/ae5788c8-8b99-49d9-8eb0-a1f52b158cd1",
+      "platform": "whatnot",
+      "imageURL": "images/lives/fur-leather-raid-train-11-28-f2f0fc4c.jpg"
+    },
+    {
+      "title": "LOVER GIRL EDIT: collab show with @jessafrags",
+      "startsAt": "2026-11-30T19:48:00-07:00",
+      "url": "https://www.whatnot.com/live/dc5aff3d-6938-4318-ba5b-8817178f7292",
+      "platform": "whatnot",
+      "imageURL": "images/lives/lover-girl-edit-collab-show-with-jessafr-8c0a62ef.jpg"
+    },
+    {
+      "title": "PIN TO REALITY RAID TRAIN",
+      "startsAt": "2026-12-05T13:34:00-07:00",
+      "url": "https://www.whatnot.com/live/6d4a2465-38ae-460a-852f-8a7121031e36",
+      "platform": "whatnot",
+      "imageURL": "images/lives/pin-to-reality-raid-train-67c325c4.jpg",
+      "tags": [
+        "Y2K"
+      ]
+    },
+    {
+      "title": "BOREAL FROST RAID TRAIN (12/10)",
+      "startsAt": "2026-12-10T12:00:00-07:00",
+      "url": "https://www.whatnot.com/live/984d6637-dd48-430f-9be8-869374be27c5",
+      "platform": "whatnot",
+      "imageURL": "images/lives/boreal-frost-raid-train-12-10-6d8e5fbe.jpg",
+      "tags": [
+        "Raid Train",
+        "Grails",
+        "Vintage"
+      ]
+    },
+    {
+      "title": "INSPIRED: Vivienne Westwood edit (tbd)",
+      "startsAt": "2026-12-11T14:47:00-07:00",
+      "url": "https://www.whatnot.com/live/2d0eb09a-8924-424b-9edc-7fca7132096a",
+      "platform": "whatnot",
+      "imageURL": "images/lives/inspired-vivienne-westwood-edit-tbd-1d5e6b7c.jpg",
+      "tags": [
+        "Vintage",
+        "Grails",
+        "Thrifted"
+      ]
+    },
+    {
+      "title": "FROSTED DREAMS: ethereal winter pastels (TBD)",
+      "startsAt": "2026-12-18T13:09:00-07:00",
+      "url": "https://www.whatnot.com/live/70dcad40-0a57-4ebe-9c3a-e29ff75772d2",
+      "platform": "whatnot",
+      "imageURL": "images/lives/frosted-dreams-ethereal-winter-pastels-t-cf275e96.jpg"
+    },
+    {
+      "title": "VALS BARBIE BDAY RAID TRAIN",
+      "startsAt": "2026-12-31T18:07:00-07:00",
+      "url": "https://www.whatnot.com/live/a2df197d-a989-4cd9-833f-5263655d84e8",
+      "platform": "whatnot",
+      "imageURL": "images/lives/vals-barbie-bday-raid-train-fef20364.jpg"
+    },
+    {
+      "title": "LET US BE FEMININE: cathedral raid train",
+      "startsAt": "2027-01-01T12:30:00-07:00",
+      "url": "https://www.whatnot.com/live/a8f019ce-d2d9-4acc-a2a5-76a1dd2b68c2",
+      "platform": "whatnot",
+      "imageURL": "images/lives/let-us-be-feminine-cathedral-raid-train-2d8d6025.jpg",
+      "tags": [
+        "Vintage",
+        "Grails",
+        "Raid Train"
+      ]
+    },
+    {
+      "title": "CAVALI CODED RAID TRAIN",
+      "startsAt": "2027-01-08T12:33:00-07:00",
+      "url": "https://www.whatnot.com/live/15857dae-7e75-4bf4-8946-09f54fa28296",
+      "platform": "whatnot",
+      "imageURL": "images/lives/cavali-coded-raid-train-be0d5b29.jpg",
+      "tags": [
+        "Vintage",
+        "Raid Train",
+        "Grails"
+      ]
+    },
+    {
+      "title": "THE ELEMENTS: a fashion raid train (1/15)",
+      "startsAt": "2027-01-15T08:06:00-07:00",
+      "url": "https://www.whatnot.com/live/eb7fa18e-1f5f-4da8-8a32-4d00a689f1ac",
+      "platform": "whatnot",
+      "imageURL": "images/lives/the-elements-a-fashion-raid-train-1-15-f981dd58.jpg"
+    },
+    {
+      "title": "ASHLEYS MET GALA RAID (1999 ROCK STYLE)",
+      "startsAt": "2027-01-24T09:52:00-07:00",
+      "url": "https://www.whatnot.com/live/9c314357-0c97-4d5a-9176-4dfc0dd30e69",
+      "platform": "whatnot",
+      "imageURL": "images/lives/ashleys-met-gala-raid-1999-rock-style-d293a93f.jpg",
+      "tags": [
+        "Vintage",
+        "Raid Train",
+        "Grails"
+      ]
+    }
+  ],
   "drop": {
-    "title": "November drop",
+    "title": "In the shop now",
     "pieces": [
       {
-        "id": "2026-11-01",
-        "title": "Placeholder: 90s leather blazer",
-        "size": "M",
+        "id": "TGlzdGluZ05vZGU6MjU2MTkzNzA0OA",
+        "title": "Victorio & Lucchino Deadstock corset",
+        "price": "$148",
+        "imageURL": "images/drops/2026-11/victorio-lucchino-deadstock-corset-ab767957.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjU2MTkzNzA0OA==",
+        "sold": false,
+        "tags": [
+          "corsets"
+        ]
+      },
+      {
+        "id": "TGlzdGluZ05vZGU6MjU1MTY5MTg5Ng",
+        "title": "NANA BAILA insane fairy velvet corset",
+        "price": "from $10",
+        "imageURL": "images/drops/2026-11/nana-baila-insane-fairy-velvet-corset-339cd1ae.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjU1MTY5MTg5Ng==",
+        "sold": false,
+        "tags": [
+          "corsets",
+          "fairy"
+        ]
+      },
+      {
+        "id": "TGlzdGluZ05vZGU6MjUzOTEzMTMyMw",
+        "title": "COP COPINE rare mesh",
+        "price": "from $10",
+        "imageURL": "images/drops/2026-11/cop-copine-rare-mesh-5c4d75f3.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjUzOTEzMTMyMw==",
+        "sold": false,
+        "tags": [
+          "tops"
+        ]
+      },
+      {
+        "id": "TGlzdGluZ05vZGU6MjUzOTAyMjU5NA",
+        "title": "ICONIC FAIRY CORSET",
+        "price": "from $10",
+        "imageURL": "images/drops/2026-11/iconic-fairy-corset-40158b05.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjUzOTAyMjU5NA==",
+        "sold": false,
+        "tags": [
+          "corsets",
+          "fairy"
+        ]
+      },
+      {
+        "id": "TGlzdGluZ05vZGU6MjUzODA0MDU4MQ",
+        "title": "SILK SHELL DRESS",
+        "price": "from $10",
+        "imageURL": "images/drops/2026-11/silk-shell-dress-eea69879.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjUzODA0MDU4MQ==",
+        "sold": false,
+        "tags": [
+          "dresses"
+        ]
+      },
+      {
+        "id": "TGlzdGluZ05vZGU6MjUzNzg5MzcyNA",
+        "title": "RACCOON FUR TUBE TOP",
+        "price": "from $15",
+        "imageURL": "images/drops/2026-11/raccoon-fur-tube-top-192c936c.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjUzNzg5MzcyNA==",
+        "sold": false,
+        "tags": [
+          "leather & fur",
+          "tops"
+        ]
+      },
+      {
+        "id": "TGlzdGluZ05vZGU6MjUzMzMxNzk5NQ",
+        "title": "THEE MODA INTERNATIONAL viral top",
+        "price": "from $10",
+        "imageURL": "images/drops/2026-11/thee-moda-international-viral-top-c31c5fd4.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjUzMzMxNzk5NQ==",
+        "sold": false,
+        "tags": [
+          "tops"
+        ]
+      },
+      {
+        "id": "TGlzdGluZ05vZGU6MjUyNzk2NzIwMw",
+        "title": "LILAC MONGOLIAN LEATHER JACKET",
+        "price": "$450",
+        "imageURL": "images/drops/2026-11/lilac-mongolian-leather-jacket-d8321eb2.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjUyNzk2NzIwMw==",
+        "sold": false,
+        "tags": [
+          "leather & fur",
+          "outerwear"
+        ]
+      },
+      {
+        "id": "TGlzdGluZ05vZGU6MjUyMTk0NTM1MA",
+        "title": "FLORAL APPLIQUÉ euro tank",
+        "price": "from $10",
+        "imageURL": "images/drops/2026-11/floral-appliqu-euro-tank-a827e105.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjUyMTk0NTM1MA==",
+        "sold": false,
+        "tags": [
+          "tops"
+        ]
+      },
+      {
+        "id": "TGlzdGluZ05vZGU6MjUyMTkzNTg0Ng",
+        "title": "FAIRYTOPIA BARBIE silk VDP corset",
+        "price": "from $10",
+        "imageURL": "images/drops/2026-11/fairytopia-barbie-silk-vdp-corset-b9c6b76a.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjUyMTkzNTg0Ng==",
+        "sold": false,
+        "tags": [
+          "corsets",
+          "fairy"
+        ]
+      },
+      {
+        "id": "TGlzdGluZ05vZGU6MjUyMTgxMzg3MA",
+        "title": "1of1 custom tie denim corset",
+        "price": "from $15",
+        "imageURL": "images/drops/2026-11/1of1-custom-tie-denim-corset-31e4540f.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjUyMTgxMzg3MA==",
+        "sold": false,
+        "tags": [
+          "corsets",
+          "denim"
+        ]
+      },
+      {
+        "id": "TGlzdGluZ05vZGU6MjUwMzU0MTI1Nw",
+        "title": "YOU KNOW I LOVE A BOXING BOOT",
+        "price": "from $15",
+        "imageURL": "images/drops/2026-11/you-know-i-love-a-boxing-boot-81f80209.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjUwMzU0MTI1Nw==",
+        "sold": false,
+        "tags": [
+          "shoes"
+        ]
+      },
+      {
+        "id": "TGlzdGluZ05vZGU6MjUwMzUwOTQ4NA",
+        "title": "DERHY GRAIL SKIRT",
+        "price": "from $15",
+        "imageURL": "images/drops/2026-11/derhy-grail-skirt-0f4bf1c9.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjUwMzUwOTQ4NA==",
+        "sold": false,
+        "tags": [
+          "skirts"
+        ]
+      },
+      {
+        "id": "TGlzdGluZ05vZGU6MjUwMzQ4NTg0Nw",
+        "title": "INSANITY PINKO CORSET",
+        "price": "from $10",
+        "imageURL": "images/drops/2026-11/insanity-pinko-corset-124975f5.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjUwMzQ4NTg0Nw==",
+        "sold": false,
+        "tags": [
+          "corsets"
+        ]
+      },
+      {
+        "id": "TGlzdGluZ05vZGU6MjUwMzQ3NDg2MA",
+        "title": "PINKO CORSET WINNERS CHOICE",
+        "price": "from $15",
+        "imageURL": "images/drops/2026-11/pinko-corset-winners-choice-5ec2b246.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjUwMzQ3NDg2MA==",
+        "sold": false,
+        "tags": [
+          "corsets"
+        ]
+      },
+      {
+        "id": "TGlzdGluZ05vZGU6MjQ5MDQ2NTk0NA",
+        "title": "NUTCRACKER BARBIE SET",
+        "price": "from $16",
+        "imageURL": "images/drops/2026-11/nutcracker-barbie-set-b29d2072.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjQ5MDQ2NTk0NA==",
+        "sold": false,
+        "tags": [
+          "fairy",
+          "sets"
+        ]
+      },
+      {
+        "id": "TGlzdGluZ05vZGU6MjQ4OTk1MDk5Nw",
+        "title": "RARE MORGAN DE TOI corset tank",
+        "price": "from $10",
+        "imageURL": "images/drops/2026-11/rare-morgan-de-toi-corset-tank-4c5178ce.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjQ4OTk1MDk5Nw==",
+        "sold": false,
+        "tags": [
+          "corsets",
+          "tops"
+        ]
+      },
+      {
+        "id": "TGlzdGluZ05vZGU6MjQ4ODYzNTE5NA",
+        "title": "STOLEN FROM A FAIRY sequin jeans",
+        "price": "$168",
+        "imageURL": "images/drops/2026-11/stolen-from-a-fairy-sequin-jeans-bb43ac2f.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjQ4ODYzNTE5NA==",
+        "sold": false,
+        "tags": [
+          "denim",
+          "fairy"
+        ]
+      },
+      {
+        "id": "TGlzdGluZ05vZGU6MjQ4NTgxODQzNg",
+        "title": "SPOT OF CHANCE soleil sucre corset",
+        "price": "$58",
+        "imageURL": "images/drops/2026-11/spot-of-chance-soleil-sucre-corset-1e1e3226.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjQ4NTgxODQzNg==",
+        "sold": false,
+        "tags": [
+          "corsets"
+        ]
+      },
+      {
+        "id": "TGlzdGluZ05vZGU6MjQ4NTM4Mzk3NA",
+        "title": "DOLCE & GABBANA insaneeee two piece set",
+        "price": "$475",
+        "imageURL": "images/drops/2026-11/dolce-gabbana-insaneeee-two-piece-set-f765e52e.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjQ4NTM4Mzk3NA==",
+        "sold": false,
+        "tags": [
+          "sets"
+        ]
+      },
+      {
+        "id": "TGlzdGluZ05vZGU6MjQ4NTM0NzM4MA",
+        "title": "RARE ISABEL DE PEDRO leather detail jacket",
+        "price": "from $10",
+        "imageURL": "images/drops/2026-11/rare-isabel-de-pedro-leather-detail-jack-98093306.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjQ4NTM0NzM4MA==",
+        "sold": false,
+        "tags": [
+          "leather & fur",
+          "outerwear"
+        ]
+      },
+      {
+        "id": "TGlzdGluZ05vZGU6MjQ4NTIxNjExOQ",
+        "title": "DEADSTOCK TULLE PONCHO",
         "price": "$48",
-        "imageURL": "images/drops/2026-11/placeholder-lavender.jpg",
-        "url": "https://www.depop.com/manicpixiethrift",
+        "imageURL": "images/drops/2026-11/deadstock-tulle-poncho-19f14a97.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjQ4NTIxNjExOQ==",
         "sold": false,
-        "tags": ["outerwear", "90s"],
-        "measurements": "Pit to pit 20 in, length 27 in"
+        "tags": [
+          "outerwear"
+        ]
       },
       {
-        "id": "2026-11-02",
-        "title": "Placeholder: silk slip dress",
-        "size": "S",
-        "price": "$36",
-        "imageURL": "images/drops/2026-11/placeholder-rose.jpg",
-        "url": "https://www.depop.com/manicpixiethrift",
+        "id": "TGlzdGluZ05vZGU6MjQ4NTA5NDcxNQ",
+        "title": "CORSET PLAID CROP JACKET",
+        "price": "$58",
+        "imageURL": "images/drops/2026-11/corset-plaid-crop-jacket-0d98fed9.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjQ4NTA5NDcxNQ==",
         "sold": false,
-        "tags": ["dresses", "romantic"]
+        "tags": [
+          "corsets",
+          "outerwear"
+        ]
       },
       {
-        "id": "2026-11-03",
-        "title": "Placeholder: Y2K rhinestone cardigan",
-        "size": "L",
-        "price": "$32",
-        "imageURL": "images/drops/2026-11/placeholder-sage.jpg",
-        "url": "https://www.depop.com/manicpixiethrift",
-        "sold": true,
-        "tags": ["knits", "y2k"]
+        "id": "TGlzdGluZ05vZGU6MjQ4NDk2MjIwNQ",
+        "title": "GALLIANO PINK LEATHER MOTO JACKET",
+        "price": "$250",
+        "imageURL": "images/drops/2026-11/galliano-pink-leather-moto-jacket-9ed0ef53.jpg",
+        "url": "https://www.whatnot.com/listing/TGlzdGluZ05vZGU6MjQ4NDk2MjIwNQ==",
+        "sold": false,
+        "tags": [
+          "leather & fur",
+          "outerwear"
+        ]
       }
     ]
   }
