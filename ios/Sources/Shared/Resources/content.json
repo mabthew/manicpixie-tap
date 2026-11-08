@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-08T12:00:00Z",
+  "brand": {
+    "name": "Manic Pixie Thrift",
+    "handle": "@manicpixiethrift",
+    "tagline": "wear what you want <3",
+    "logoURL": "https://tap.manicpixiethrift.com/images/logo-512.png",
+    "accentHex": "#C9B6E4"
+  },
+  "links": [
+    { "id": "depop", "kind": "depop", "title": "Shop on Depop", "url": "https://www.depop.com/manicpixiethrift" },
+    { "id": "whatnot", "kind": "whatnot", "title": "Whatnot lives", "url": "https://www.whatnot.com/s/RfBZOqUW" },
+    { "id": "instagram", "kind": "instagram", "title": "Instagram", "url": "https://www.instagram.com/manicpixiethrift/" },
+    { "id": "tiktok", "kind": "tiktok", "title": "TikTok", "url": "https://www.tiktok.com/@manicpixiethrift" },
+    { "id": "pinterest", "kind": "pinterest", "title": "Pinterest", "url": "https://www.pinterest.com/manicpixiethrift/" },
+    { "id": "site", "kind": "website", "title": "manicpixiethrift.com", "url": "https://manicpixiethrift.com/" }
+  ],
+  "booking": {
+    "title": "Styling appointment",
+    "blurb": "Style bundles shipped to you, or shop the studio together in Denver",
+    "url": "https://calendly.com/mpdgthrift"
+  },
+  "nextLive": {
+    "title": "Cozy season drop",
+    "startsAt": "2026-11-15T19:00:00-07:00",
+    "url": "https://www.whatnot.com/s/RfBZOqUW",
+    "platform": "whatnot"
+  },
+  "drop": {
+    "title": "November drop",
+    "pieces": [
+      {
+        "id": "2026-11-01",
+        "title": "Placeholder: 90s leather blazer",
+        "size": "M",
+        "price": "$48",
+        "imageURL": "https://tap.manicpixiethrift.com/images/drops/2026-11/placeholder-lavender.jpg",
+        "url": "https://www.depop.com/manicpixiethrift",
+        "sold": false,
+        "tags": ["outerwear", "90s"],
+        "measurements": "Pit to pit 20 in, length 27 in"
+      },
+      {
+        "id": "2026-11-02",
+        "title": "Placeholder: silk slip dress",
+        "size": "S",
+        "price": "$36",
+        "imageURL": "https://tap.manicpixiethrift.com/images/drops/2026-11/placeholder-rose.jpg",
+        "url": "https://www.depop.com/manicpixiethrift",
+        "sold": false,
+        "tags": ["dresses", "romantic"]
+      },
+      {
+        "id": "2026-11-03",
+        "title": "Placeholder: Y2K rhinestone cardigan",
+        "size": "L",
+        "price": "$32",
+        "imageURL": "https://tap.manicpixiethrift.com/images/drops/2026-11/placeholder-sage.jpg",
+        "url": "https://www.depop.com/manicpixiethrift",
+        "sold": true,
+        "tags": ["knits", "y2k"]
+      }
+    ]
+  }
+}

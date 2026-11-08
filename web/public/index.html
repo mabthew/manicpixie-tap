@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manic Pixie Thrift</title>
+<meta name="description" content="Secondhand styling in Denver. wear what you want <3">
+<meta property="og:title" content="Manic Pixie Thrift">
+<meta property="og:description" content="Secondhand styling in Denver · wear what you want <3">
+<meta property="og:image" content="https://tap.manicpixiethrift.com/og-image.jpg">
+<meta property="og:url" content="https://tap.manicpixiethrift.com/">
+<!-- TODO once the app is live in the App Store: replace APPLE_ID with the numeric Apple ID from App Store Connect
+<meta name="apple-itunes-app" content="app-id=APPLE_ID, app-clip-bundle-id=com.manicpixiethrift.app.Clip, app-clip-display=card">
+-->
+<link rel="icon" href="/images/logo-512.png">
+<style>
+  :root { --cream:#EFE9E0; --ink:#1A1A1A; --lavender:#C9B6E4; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--cream); color:var(--ink); font:17px/1.45 -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  main { max-width:520px; margin:0 auto; padding:40px 20px 60px; }
+  header { text-align:center; }
+  header img { width:140px; height:140px; border-radius:50%; display:block; margin:0 auto 14px; }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-weight:600; font-size:34px; margin:0 0 6px; }
+  .tag { opacity:.7; margin:0 0 28px; }
+  .live { background:var(--ink); color:var(--cream); border-radius:22px; padding:18px 20px; margin:0 0 20px; }
+  .live small { letter-spacing:.12em; text-transform:uppercase; font-size:12px; font-weight:700; opacity:.85; }
+  .live h2 { font-family: Georgia, serif; font-weight:600; margin:6px 0 4px; font-size:22px; }
+  .live a { color:var(--cream); }
+  .book { display:flex; gap:14px; align-items:center; background:rgba(201,182,228,.45); border-radius:18px; padding:16px 18px; text-decoration:none; color:var(--ink); margin:0 0 28px; }
+  .book b { display:block; }
+  .book span { font-size:14px; opacity:.75; }
+  h3 { font-family: Georgia, serif; font-weight:600; font-size:20px; margin:0 0 12px; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:0 0 28px; }
+  .grid a { background:rgba(26,26,26,.06); border-radius:14px; padding:12px 14px; text-decoration:none; color:var(--ink); font-weight:500; }
+  .pieces { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:0 0 28px; }
+  .pieces img { width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:14px; display:block; }
+  .pieces b { display:block; font-weight:500; font-size:15px; margin-top:6px; }
+  .pieces span { font-size:14px; opacity:.7; }
+  footer { text-align:center; font-size:13px; opacity:.6; }
+  footer a { color:inherit; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="/images/logo-512.png" alt="Manic Pixie Thrift">
+    <h1 id="name">Manic Pixie Thrift</h1>
+    <p class="tag" id="tagline">wear what you want &lt;3</p>
+  </header>
+  <div id="live"></div>
+  <div id="book"></div>
+  <div id="drop"></div>
+  <h3>Find us</h3>
+  <div class="grid" id="links">
+    <a href="https://www.depop.com/manicpixiethrift">Shop on Depop</a>
+    <a href="https://www.whatnot.com/s/RfBZOqUW">Whatnot lives</a>
+    <a href="https://www.instagram.com/manicpixiethrift/">Instagram</a>
+    <a href="https://www.tiktok.com/@manicpixiethrift">TikTok</a>
+    <a href="https://www.pinterest.com/manicpixiethrift/">Pinterest</a>
+    <a href="https://manicpixiethrift.com/">manicpixiethrift.com</a>
+  </div>
+  <footer>Denver, CO · <a href="/privacy/">Privacy</a></footer>
+</main>
+<script>
+(async () => {
+  try {
+    const r = await fetch('/content.json', { cache: 'no-cache' });
+    const c = await r.json();
+    const esc = s => String(s).replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+    document.getElementById('name').textContent = c.brand.name;
+    document.getElementById('tagline').textContent = c.brand.tagline;
+    if (c.nextLive) {
+      const start = new Date(c.nextLive.startsAt);
+      const when = start.toLocaleString(undefined, { weekday:'long', month:'short', day:'numeric', hour:'numeric', minute:'2-digit' });
+      const live = start <= new Date();
+      document.getElementById('live').innerHTML =
+        `<div class="live"><small>${live ? 'Live now' : 'Next live'}</small><h2>${esc(c.nextLive.title)}</h2>` +
+        `<div>${live ? `<a href="${esc(c.nextLive.url)}">Join on ${esc(c.nextLive.platform)}</a>` : esc(when)}</div></div>`;
+    }
+    if (c.booking) {
+      document.getElementById('book').innerHTML =
+        `<a class="book" href="${esc(c.booking.url)}"><div><b>${esc(c.booking.title)}</b><span>${esc(c.booking.blurb)}</span></div></a>`;
+    }
+    if (c.drop && c.drop.pieces.length) {
+      document.getElementById('drop').innerHTML = `<h3>${esc(c.drop.title)}</h3><div class="pieces">` +
+        c.drop.pieces.map(p => `<a href="${esc(p.url || c.links[0].url)}"><img src="${esc(p.imageURL)}" alt="${esc(p.title)}" loading="lazy">` +
+          `<b>${esc(p.title)}</b><span>${[p.size, p.price, p.sold ? 'SOLD' : ''].filter(Boolean).map(esc).join(' · ')}</span></a>`).join('') + '</div>';
+    }
+    document.getElementById('links').innerHTML = c.links.map(l => `<a href="${esc(l.url)}">${esc(l.title)}</a>`).join('');
+  } catch (e) { /* static markup above is the fallback */ }
+})();
+</script>
+</body>
+</html>
