@@ -27,8 +27,11 @@ struct HomeView: View {
         Array(Set(site.drop?.pieces.flatMap(\.tags) ?? [])).sorted()
     }
 
+    /// The full app can only be offered once it is on the App Store (Config.appStoreID is set then).
+    private var canPromoteApp: Bool { isClip && !Config.appStoreID.isEmpty }
+
     private var getAppAction: (() -> Void)? {
-        isClip ? { showPromo = true } : nil
+        canPromoteApp ? { showPromo = true } : nil
     }
 
     var body: some View {
@@ -102,7 +105,7 @@ struct HomeView: View {
     }
 
     private func offerFullApp() {
-        guard isClip, !promoShown else { return }
+        guard canPromoteApp, !promoShown else { return }
         promoShown = true
         showPromo = true
     }
