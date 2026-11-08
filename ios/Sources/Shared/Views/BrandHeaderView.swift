@@ -2,7 +2,6 @@ import SwiftUI
 
 struct BrandHeaderView: View {
     let brand: Brand
-    let greeting: String?
 
     var body: some View {
         VStack(spacing: 12) {
@@ -17,13 +16,6 @@ struct BrandHeaderView: View {
             Text(brand.tagline)
                 .font(.callout)
                 .opacity(0.7)
-            if let greeting {
-                Text(greeting)
-                    .font(.footnote.weight(.medium))
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 6)
-                    .background(Capsule().fill(Theme.accent(brand.accentHex).opacity(0.5)))
-            }
         }
         .foregroundStyle(Theme.ink)
         .frame(maxWidth: .infinity)

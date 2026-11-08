@@ -23,14 +23,6 @@ struct HomeView: View {
         #endif
     }
 
-    private var greeting: String? {
-        switch invocation.source {
-        case .fob: "you tapped in from the fob <3"
-        case .qr: "scanned in from the keychain <3"
-        case .web, .unknown: nil
-        }
-    }
-
     private var allTags: [String] {
         Array(Set(site.drop?.pieces.flatMap(\.tags) ?? [])).sorted()
     }
@@ -44,7 +36,7 @@ struct HomeView: View {
             ScrollViewReader { proxy in
                 ScrollView {
                     VStack(spacing: 28) {
-                        BrandHeaderView(brand: site.brand, greeting: greeting)
+                        BrandHeaderView(brand: site.brand)
                         if let live = site.nextLive {
                             LiveCountdownView(event: live)
                                 .id(InvocationState.Section.live)

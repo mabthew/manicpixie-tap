@@ -5,8 +5,7 @@
     xcodebuild test -project ManicPixieThrift.xcodeproj -scheme ManicPixieThrift \
       -destination 'platform=iOS Simulator,name=iPhone Air' CODE_SIGNING_ALLOWED=NO
 Run the `ManicPixieThriftClip` scheme in Xcode: the scheme's `_XCAppClipURL` environment variable
-feeds it `https://tap.manicpixiethrift.com/?src=fob`, so the "tapped in from the fob" greeting shows.
-Untick the variable to exercise the no-URL path. Add the launch argument
+feeds it `https://tap.manicpixiethrift.com/?src=fob`. Untick the variable to exercise the no-URL path. Add the launch argument
 `-ContentURL https://invalid.example` to prove the bundled fallback.
 
 ## Your iPhone, with the real fob (no App Store needed)
